@@ -10,8 +10,12 @@ public class LoopFun
        * @return the factorial of the number
        */
       public Integer factorial(Integer number){
-          return null;
+          if(number <= 1)
+          return number;
+          else{
+           return number*factorial(number-1);
       }
+    }
 
       /**
        * Given a phrase, get the acronym of that phrase. Acronym is the combination of
@@ -21,7 +25,20 @@ public class LoopFun
        * @return Upper case string of the first letter of each word
        */
       public String acronym(String phrase) {
-          return null;
+          String acro="";
+          if(phrase.charAt(0)!=' ')
+          acro+=phrase.charAt(0);
+          boolean check = false;
+          for(int i =1; i< phrase.length();i++){
+           char x = phrase.charAt(i);
+           if(check)
+           acro+=x;
+           if(x==' ')
+           check = true;
+           else
+           check = false;
+            }
+          return acro.toUpperCase();
       }
 
       /**
@@ -37,6 +54,44 @@ public class LoopFun
        * @return the encrypted string by shifting each character by three character
        */
       public String encrypt(String word) {
-          return null;
+          String enc ="";
+          int index =0;
+              char[] lower  =new char [26];
+              char[] upper = new char [26];
+              char l='a';
+              char u= 'A';
+              
+              for(int i=0; i<26;i++){
+                lower[i]=l;
+                upper[i]=u;
+                l+=1;
+                u+=1;
+                }
+          for(int i =0; i < word.length(); i++){
+            
+              char x = word.charAt(i);
+              
+              
+              if(x>='a'&& x<='z'){
+              index = x - 'a';
+              
+              index += 3;
+              if(index<26)
+              enc+=lower[index];
+              else
+              enc+=lower[index-26];
+              
+              
+            }
+              else{
+              index = x  -'A';
+              index += 3;
+              if(index<26)
+              enc+=upper[index];
+              else
+              enc+=upper[index-26];
+            }
+            }
+          return enc;
       }
 }
