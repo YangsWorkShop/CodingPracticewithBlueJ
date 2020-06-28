@@ -10,7 +10,11 @@ public class LoopFun
        * @return the factorial of the number
        */
       public Integer factorial(Integer number){
-          return null;
+          int factorialNumber=1;
+          for(int i=1;i<=number;i++){
+            factorialNumber=factorialNumber*i;
+            }
+          return factorialNumber;
       }
 
       /**
@@ -21,7 +25,12 @@ public class LoopFun
        * @return Upper case string of the first letter of each word
        */
       public String acronym(String phrase) {
-          return null;
+          String[] splited= phrase.split(" ");
+          String acronym="";
+          for(String item:splited){
+            acronym=acronym+item.charAt(0);
+            }
+          return acronym.toUpperCase();
       }
 
       /**
@@ -37,6 +46,18 @@ public class LoopFun
        * @return the encrypted string by shifting each character by three character
        */
       public String encrypt(String word) {
-          return null;
+          String encryptString="";
+          for(char item: word.toCharArray()){
+              if(item=='x')
+                encryptString=encryptString+"a";
+              else if(item=='y')
+                encryptString=encryptString+"b";
+              else if(item=='z')
+                encryptString=encryptString+"c";
+              else
+               
+                encryptString=encryptString+ (char)((int)item+3);
+            }
+          return encryptString;
       }
 }
