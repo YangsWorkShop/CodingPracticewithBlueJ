@@ -2,6 +2,17 @@
 
 public class LoopFun
 {
+    
+    public static void main(String[] args){
+        
+        LoopFun object = new LoopFun();
+        Integer method1 = object.factorial(5);
+        System.out.println(method1);
+        String method2 = object.acronym("Ruby on Rails");
+        System.out.println(method2);
+        String method3 = object.encrypt("");
+        System.out.println(method3);
+    }
 
       /**
        * Given a number, return the factorial of that number.
@@ -10,7 +21,11 @@ public class LoopFun
        * @return the factorial of the number
        */
       public Integer factorial(Integer number){
-          return null;
+          Integer fact = 1;
+          for(int i = 1; i <= number; i++){
+              fact = fact * i;
+            }
+          return fact;
       }
 
       /**
@@ -21,7 +36,17 @@ public class LoopFun
        * @return Upper case string of the first letter of each word
        */
       public String acronym(String phrase) {
-          return null;
+          StringBuilder acronym = new StringBuilder();
+
+          String[] WordsArray = phrase.split(" ");
+          for(String word : WordsArray) {
+              acronym.append(word.substring(0,1) );
+              
+          }
+          
+          String output = acronym.toString();
+          
+          return output.toUpperCase();
       }
 
       /**
@@ -37,6 +62,19 @@ public class LoopFun
        * @return the encrypted string by shifting each character by three character
        */
       public String encrypt(String word) {
-          return null;
+          //StringBuilder new_string = new StringBuilder();
+          String s = "";
+          int len = word.length();
+          int shift = 3;
+          for(int x = 0; x < len; x++){
+              char c = (char)(word.charAt(x) + shift);
+              if (c > 'z')
+                s += (char)(word.charAt(x) - (26-shift));
+              else
+                s += (char)(word.charAt(x) + shift);
+            }
+          return s;
+          
+      
       }
 }
