@@ -47,14 +47,14 @@ public class LoopFun
        * @return the encrypted string by shifting each character by three character
        */
       public String encrypt(String word) {
-          String result = word;
+          String result = "";
           for (int i = 0; i < word.length(); i++) {
               int letter = (int)word.charAt(i) + 3;
               if (letter > 122) {
-                  result = word.replace(word.charAt(i), (char)(letter-26));
-              } else {
-                  result = word.replace(word.charAt(i), (char)(letter));
+                  letter = letter - 26;
               }
+              char letterPlusThree = (char) letter;
+              result = result + String.valueOf(letterPlusThree);
           }
           return result;
       }
