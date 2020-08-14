@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=LoopFun
+comment1.params=number
+comment1.target=java.lang.Integer\ factorial(java.lang.Integer)
+comment1.text=\r\n\ Given\ a\ number,\ return\ the\ factorial\ of\ that\ number.\r\n\ For\ example,\ given\ 5,\ the\ factorial\ is\ 5\ x\ 4\ x\ 3\ x\ 2\ x\ 1\ which\ should\ return\ 120.\r\n\ @param\ number\r\n\ @return\ the\ factorial\ of\ the\ number\r\n
+comment2.params=phrase
+comment2.target=java.lang.String\ acronym(java.lang.String)
+comment2.text=\r\n\ Given\ a\ phrase,\ get\ the\ acronym\ of\ that\ phrase.\ Acronym\ is\ the\ combination\ of\r\n\ the\ first\ character\ of\ each\ word\ in\ upper\ case.\r\n\ For\ example,\ given\ "Ruby\ on\ Rails",\ this\ method\ will\ return\ "ROR"\r\n\ @param\ phrase\r\n\ @return\ Upper\ case\ string\ of\ the\ first\ letter\ of\ each\ word\r\n
+comment3.params=word
+comment3.target=java.lang.String\ encrypt(java.lang.String)
+comment3.text=\r\n\ To\ prevent\ anyone\ from\ reading\ our\ messages,\ we\ can\ encrypt\ it\ so\ it\ will\ only\ be\ readable\ by\ its\r\n\ intended\ audience.\ This\ method\ encrypt\ the\ message\ by\ shifting\ the\ letter\ by\ 3\ characters.\ If\ the\ character\ is\r\n\ at\ the\ end\ of\ the\ alphabet,\ it\ will\ wraps\ around.\r\n\ For\ example\:\r\n\ \ 'a'\ \=>\ 'd'\r\n\ \ 'w'\ \=>\ 'z'\r\n\ \ 'x'\ \=>\ 'a'\r\n\ \ 'y'\ \=>\ 'b'\r\n\ @param\ word\r\n\ @return\ the\ encrypted\ string\ by\ shifting\ each\ character\ by\ three\ character\r\n
+numComments=4
