@@ -9,7 +9,14 @@ public class MathUtilities{
    * @return the sum of the two numbers
    */
   public Integer add(Integer baseValue, Integer valueToAdd){
-      return null;
+      // Initialize the sum with 0
+      int sum =0;
+      
+      //  add the basevalue with valuetoadd and to the sum
+      sum = baseValue +  valueToAdd;
+      
+      //return sum
+      return sum;
   }
 
   /**
@@ -19,7 +26,14 @@ public class MathUtilities{
    * @return the sum of the two numbers
    */
   public Double add(Double baseValue, Double valueToAdd){
-      return null;
+      //initialize sum with datatype double 
+      double sum=0;
+      
+      // add the two numbers and store it into sum
+      sum = baseValue + valueToAdd;
+      
+      //return sum
+      return sum;
   }
 
   /**
@@ -28,7 +42,14 @@ public class MathUtilities{
    * @return the half of the number in double
    */
   public Double half(Integer number) {
-      return null;
+      //initialize half with  datatype double
+      double half=0;
+      
+      //half is number divided by 2
+      half =number/2;
+      
+      //return half
+      return half;
   }
 
   /**
@@ -37,7 +58,12 @@ public class MathUtilities{
    * @return true if the number is odd, false if it is even
    */
   public Boolean isOdd(Integer number){
-      return null;
+      //  if the number modulus by 2 results into a remaiinder to be 0,  then it is a 
+      //even number(return false)
+      // otherwise it is an odd number(return true).
+      if (number%2 == 0)
+          return false;
+      return true;
   }
 
 
@@ -47,7 +73,14 @@ public class MathUtilities{
    * @return the result of the number multiply by itself
    */
   public Integer square(Integer number) {
-      return null;
+      // Initialize the number
+      int res=0;
+      
+      // result is number multiply by itself
+      res= number*number;
+      
+      //return res
+      return res;
   }
 
 }

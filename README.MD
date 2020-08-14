@@ -1,3 +1,4 @@
+# CodingPracticewithBlueJ- Solutions
 
 ## **Git Instructions**
 
@@ -57,4 +58,3 @@
   - `int factorial(int number)`
   - `String acronym(String phrase)`
   - `String encrypt(String word)`
-# CodingPracticewithBlueJ

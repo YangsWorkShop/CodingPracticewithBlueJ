@@ -10,7 +10,18 @@ public class LoopFun
        * @return the factorial of the number
        */
       public Integer factorial(Integer number){
-          return null;
+          //initialize the fac variable to 1 as 0 wil result into the final value being zero.
+          int fac =1;
+          
+          // iterate from number to 1 by decrementing 
+          for(int i =number; i>0; i--){
+              
+              //update the fac with  each number multiplication
+              fac*=i;
+            }
+            
+          // return factorial
+          return fac;
       }
 
       /**
@@ -21,7 +32,22 @@ public class LoopFun
        * @return Upper case string of the first letter of each word
        */
       public String acronym(String phrase) {
-          return null;
+          // Split the srting with the help of spaces into list.
+          String [] phrasechange = phrase.split(" ");
+          
+          //initialize a new string
+          String s = new String();
+          
+          // iterate through the list 
+          for(int i=0; i< phrasechange.length; i++){
+              
+              //take the value of first index of the each element, convert it into uppercase
+              //then add it to the string.
+              s += Character.toString(phrasechange[i].charAt(0)).toUpperCase();
+              }
+              
+            //  return the string
+            return s;
       }
 
       /**
@@ -37,6 +63,28 @@ public class LoopFun
        * @return the encrypted string by shifting each character by three character
        */
       public String encrypt(String word) {
-          return null;
+          char shift = 3;
+          
+          // initialize new string
+          String s = "";
+          
+          //iterate through the word string
+          for(int i=0; i<word.length(); i++){
+              
+              //for each letter in word, add the shift to the character
+              char c = (char)((word.charAt(i) + shift));
+              
+              // if the char falls off the end.
+              if (c > 'z')
+                    
+                    // subtract the shift from 26 and add the character to the string.    
+                    s += (char)(word.charAt(i) -(26-shift));
+              else
+                    //If the character is less than z, then only add the shift.
+                    s += (char)(word.charAt(i) + shift);
+              
+            }
+          // return the string  
+          return s;
       }
 }
