@@ -5,7 +5,8 @@ public class StringUtilities {
      * @return `input`
      */
     public String returnInput(String input) {
-        return null;
+        String result = input;
+        return result;
     }
 
     /**
@@ -14,7 +15,7 @@ public class StringUtilities {
      * @return the concatenation of `baseValue` and `valueToBeAdded`
      */
     public String concatenate(String baseValue, String valueToBeAdded) {
-        return null;
+        return baseValue + valueToBeAdded;
     }
 
     /**
@@ -22,7 +23,20 @@ public class StringUtilities {
      * @return identical string with characters in opposite order
      */
     public String reverse(String valueToBeReversed) {
-        return null;
+
+        char[] letters = valueToBeReversed.toCharArray();
+        int i = 0;
+        int j = valueToBeReversed.length() - 1;
+        
+        while(i < j) {
+            char temp = letters[i];
+            letters[i] = letters[j];
+            letters[j] = temp;
+            i = i + 1;
+            j = j - 1;
+        }
+        
+        return new String(letters);
     }
 
     /**
@@ -30,7 +44,8 @@ public class StringUtilities {
      * @return middle character of `word`
      */
     public Character getMiddleCharacter(String word) {
-        return null;
+        int mid = word.length() / 2;
+        return word.charAt(mid);
     }
 
     /**
@@ -39,7 +54,9 @@ public class StringUtilities {
      * @return `value` with char of value `charToRemove` removed
      */
     public String removeCharacter(String value, Character charToRemove) {
-        return null;
+        String charToRemoveString = Character.toString(charToRemove);
+        String result = value.replace(charToRemoveString, "");
+        return result;
     }
 
     /**
@@ -47,6 +64,9 @@ public class StringUtilities {
      * @return last `word` in sentence
      */
     public String getLastWord(String sentence) {
-        return null;
+        String result = "";
+        String[] words = sentence.split(" ");
+        result = words[words.length-1];
+        return result;
     }
 }
