@@ -57,8 +57,6 @@ public class StringUtilities {
     			res += arr[i];
     		}
     	}
-
-    	
         return res;
     }
 
