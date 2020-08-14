@@ -10,18 +10,29 @@ public class LoopFun
        * @return the factorial of the number
        */
       public Integer factorial(Integer number){
-          return null;
+        int fac = 1;
+        for (int i = 2; i <= number; i++) {
+            fac = fac * i;
+        }  
+        return fac;
       }
 
+
+
       /**
-       * Given a phrase, get the acronym of that phrase. Acronym is the combination of
+       * How Given a phrase, get the acronym of that phrase. Acronym is the combination of
        * the first character of each word in upper case.
        * For example, given "Ruby on Rails", this method will return "ROR"
        * @param phrase
        * @return Upper case string of the first letter of each word
        */
       public String acronym(String phrase) {
-          return null;
+        String[] str = phrase.split(" ");
+        char[] arr = new char[str.length];
+        for (int i = 0; i < str.length; i++) {
+            arr[i] = str[i].charAt(0);
+        }  
+        return new String(arr).toUpperCase();
       }
 
       /**
@@ -37,6 +48,10 @@ public class LoopFun
        * @return the encrypted string by shifting each character by three character
        */
       public String encrypt(String word) {
-          return null;
+          char[] arr = word.toCharArray();
+          for (int i = 0; i < arr.length; i++) {
+              arr[i] = (char)('a' + (arr[i] - 'a' + 3) % 26);
+          }
+          return new String(arr);
       }
 }

@@ -1,0 +1,45 @@
+{
+	"folders": [
+		{
+			"path": "..\\..\\..\\Users\\sunmz\\OneDrive\\Documents\\coin"
+		},
+		{
+			"path": "..\\..\\..\\workspace"
+		},
+		{
+			"name": "Itlize",
+			"path": ".."
+		},
+		{
+			"name": "CodingPracticewithBlueJ",
+			"path": "."
+		}
+	],
+	"settings": {
+		"files.exclude": {
+			"**/.classpath": true,
+			"**/.project": true,
+			"**/.settings": true,
+			"**/.factorypath": true
+		},
+		"java.project.referencedLibraries": [
+			"lib/**/*.jar",
+			"c:\\Users\\sunmz\\Downloads\\junit-platform-console-standalone-1.7.0-M1.jar"
+		]
+	},
+	"launch": {
+		"version": "0.2.0",
+		"configurations": [
+		
+			{
+				"type": "node",
+				"request": "launch",
+				"name": "Launch Program",
+				"skipFiles": [
+					"<node_internals>/**"
+				],
+				"program": "${file}"
+			}
+		]
+	}
+}
