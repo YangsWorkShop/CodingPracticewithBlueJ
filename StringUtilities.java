@@ -5,7 +5,7 @@ public class StringUtilities {
      * @return `input`
      */
     public String returnInput(String input) {
-        return null;
+        return input;
     }
 
     /**
@@ -14,7 +14,7 @@ public class StringUtilities {
      * @return the concatenation of `baseValue` and `valueToBeAdded`
      */
     public String concatenate(String baseValue, String valueToBeAdded) {
-        return null;
+        return baseValue + valueToBeAdded;
     }
 
     /**
@@ -22,7 +22,14 @@ public class StringUtilities {
      * @return identical string with characters in opposite order
      */
     public String reverse(String valueToBeReversed) {
-        return null;
+        int i = 0, j = valueToBeReversed.length() - 1;
+        char[] result = valueToBeReversed.toCharArray();
+        while (i < j) {
+            char tmp = result[i];
+            result[i++] = result[j];
+            result[j--] = tmp;
+        }
+        return new String(result);
     }
 
     /**
@@ -30,7 +37,7 @@ public class StringUtilities {
      * @return middle character of `word`
      */
     public Character getMiddleCharacter(String word) {
-        return null;
+        return word.charAt(word.length() / 2);
     }
 
     /**
@@ -39,7 +46,13 @@ public class StringUtilities {
      * @return `value` with char of value `charToRemove` removed
      */
     public String removeCharacter(String value, Character charToRemove) {
-        return null;
+        String res = "";
+        for(int i = 0; i < value.length(); i++){
+            if(value.charAt(i) != charToRemove){
+                res += value.charAt(i);
+            }
+        }
+        return res;
     }
 
     /**
@@ -47,6 +60,14 @@ public class StringUtilities {
      * @return last `word` in sentence
      */
     public String getLastWord(String sentence) {
-        return null;
+        int idx = sentence.length()-1;
+        while(sentence.charAt(idx) != ' '){
+            idx--;
+        }
+        String result = "";
+        for(int i = idx+1; i < sentence.length(); i++){
+            result += sentence.charAt(i);
+        }
+        return result;
     }
 }
