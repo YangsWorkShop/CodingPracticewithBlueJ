@@ -31,7 +31,7 @@ public class StringUtilsRemoveCharacterTest {
     public void test1(){
         // Given
         String word = "tryptophan";
-        String expected = "rypophan";
+        String expected = "ryptophan";
         char charToRemove = 't';
 
         //When
