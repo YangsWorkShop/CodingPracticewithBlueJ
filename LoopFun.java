@@ -10,7 +10,14 @@ public class LoopFun
        * @return the factorial of the number
        */
       public Integer factorial(Integer number){
-          return null;
+          if (number == null) {    
+              return null;
+          }
+          int fac = 1;
+          while(number > 1) {
+              fac *= number--;
+          }
+          return fac;
       }
 
       /**
@@ -21,7 +28,17 @@ public class LoopFun
        * @return Upper case string of the first letter of each word
        */
       public String acronym(String phrase) {
-          return null;
+          if (phrase == null) {
+              return null;
+          }
+          //Convert the phrase to uppercase and separate it into an array with spaces
+          String[] s = phrase.toUpperCase().split(" ");
+          String resultStr = ""; 
+          for (String str : s) {
+              //concat the first char of String
+              resultStr = resultStr.concat(String.valueOf(str.charAt(0)));
+          }
+          return resultStr;
       }
 
       /**
@@ -37,6 +54,33 @@ public class LoopFun
        * @return the encrypted string by shifting each character by three character
        */
       public String encrypt(String word) {
-          return null;
+          if (word == null) {
+            return null;
+          }
+          int x = 0;
+          //store result String
+          String s = "";
+          for (int i = 0; i < word.length(); ++i) {
+              //get current char
+              char c = word.charAt(i);
+              //if c=x,y,z then c equal the case 
+              switch (c) {
+                  case 'x':
+                     s = s.concat("a");
+                     break;
+                  case 'y':
+                     s = s.concat("b");
+                     break;
+                  case 'z':
+                     s = s.concat("c");
+                     break;
+                  default:
+                     //c not equal x,y,z normal + 3
+                     x = c + 3;
+                     s = s.concat(String.valueOf((char)x));
+                     break;
+              } 
+          }
+          return s; 
       }
 }
