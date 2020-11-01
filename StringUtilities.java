@@ -1,52 +1,57 @@
 
-public class StringUtilities {
-    /**
-     * @param input value to be returned
-     * @return `input`
-     */
-    public String returnInput(String input) {
-        return null;
+/**
+ * Write a description of class StringUtilities here.
+ *
+ * @author (your name)
+ * @version (a version number or a date)
+ */
+public class StringUtilities
+{
+    // get the middle character of the input word
+    public static Character getMiddleCharacter(String word)
+    {
+        return word.charAt(word.length()/2);
+    }
+    
+    //remove the specific char from the input string
+    public static String removeCharacter(String word, char charToRemove)
+    {
+        String result = "";
+        for (int i=0; i<word.length(); i++){
+            if (word.charAt(i) != charToRemove){
+                result += word.charAt(i);
+            }
+        }
+        return result;
+    }
+    
+    //split a string into words and return the last word
+    public static String getLastWord(String value)
+    {
+        String[] result = value.split(" ");
+        return result[result.length - 1];
+    }
+    
+    //concate two string and return it
+    public static String concatenate(String baseValue, String valueToBeAdded)
+    {
+        return baseValue + valueToBeAdded;
+    }
+    
+    //return the reversed input string
+    public static String reverse(String valueToBeReversed)
+    {
+        char[] tempArray = valueToBeReversed.toCharArray();
+        String result = "";
+        for(int i=tempArray.length - 1; i>=0; i--){
+           result += tempArray[i];
+        }
+        return result;
     }
 
-    /**
-     * @param baseValue value to be added to
-     * @param valueToBeAdded value to add
-     * @return the concatenation of `baseValue` and `valueToBeAdded`
-     */
-    public String concatenate(String baseValue, String valueToBeAdded) {
-        return null;
-    }
-
-    /**
-     * @param valueToBeReversed value to be reversed
-     * @return identical string with characters in opposite order
-     */
-    public String reverse(String valueToBeReversed) {
-        return null;
-    }
-
-    /**
-     * @param word word to get middle character of
-     * @return middle character of `word`
-     */
-    public Character getMiddleCharacter(String word) {
-        return null;
-    }
-
-    /**
-     * @param value value to have character removed from
-     * @param charToRemove character to be removed from `value`
-     * @return `value` with char of value `charToRemove` removed
-     */
-    public String removeCharacter(String value, Character charToRemove) {
-        return null;
-    }
-
-    /**
-     * @param sentence String delimited by spaces representative of a sentence
-     * @return last `word` in sentence
-     */
-    public String getLastWord(String sentence) {
-        return null;
+    // return the input value
+    public static String returnInput(String input)
+    {
+        return input;
     }
 }
