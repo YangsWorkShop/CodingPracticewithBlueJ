@@ -1,5 +1,3 @@
- 
-
 import static org.junit.Assert.*;
 import org.junit.After;
 import org.junit.Before;
@@ -24,7 +22,6 @@ public class LoopFunEncryptTest
 
         //When
         String actual = loop.encrypt(word);
-
         //Then
         assertEquals(expected, actual);
     }
